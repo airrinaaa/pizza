@@ -1,0 +1,475 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff8e1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 250px;
+    gap: 20px;
+    padding: 5px;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 3;
+
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    width: calc(100% - 330px);
+    right: 300px;
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.8);
+    z-index: 20;
+}
+nav {
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+nav a {
+    color: #e68a00;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffe0b2;
+}
+
+nav a.active {
+    background-color: #ff9900;
+    color: white;
+}
+
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #e68a00;
+    padding: 50px 21px 5px 21px;
+    margin-top: -20px;
+    color: white;
+
+}
+
+.upbadge-img {
+    position: fixed;
+    transform: scaleY(-1);
+    margin-left: 20px;
+    margin-top: 90px;
+}
+
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    display: flex;
+    color: darkgray;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.contact-info #free{
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-right: 100px;
+
+
+
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.login button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.login button:hover {
+    background-color: #e68a00;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: darkgray;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.login hr {
+    border: none;
+    height: 1px;
+    background-color: darkgray;
+    margin: 3px 0 0 0;
+    width: 110%;
+}
+
+.pizza {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 13px;
+    background-color: #e68a00;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 90px;
+    font-size: 14px;
+    z-index: 3;
+}
+
+.badge-img {
+    z-index: 3;
+    position: fixed;
+    bottom: 72px;
+    margin-left: 8px;
+}
+.pizza-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 170px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pizza-title span {
+    background-color: #ff9900;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.pizza-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.pizza-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: white;
+    position: relative;
+    max-height: 600px;
+
+}
+
+.pizza-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pizza-header {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.new {
+    background-color: red;
+}
+
+.popular {
+    background-color: green;
+}
+
+.pizza-card h3 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+    color: #e68a00;
+}
+
+.pizza-card p {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.pizza-sizes {
+    display: flex;
+    justify-content: space-around;
+
+
+
+}
+
+.size-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: rgba(225, 225, 225, 0.5);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.size-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 19px;
+
+}
+
+
+
+.pizza-card button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pizza-card button:hover {
+    background-color: darkorange;
+}
+
+.order-panel {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    height: 95%;
+    width: 250px;
+    overflow-y: auto;
+
+}
+
+.order-panel .clear-order,
+.order-panel .order-button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.order-panel .clear-order:hover,
+.order-panel .order-button:hover {
+    background-color: #e68a00;
+}
+
+.order-panel h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.order-item {
+    display: flex;
+    margin: 20px 0;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.order-details {
+    flex-grow: 1;
+}
+
+.order-details h3 {
+    margin: 0 0 10px 0;
+}
+
+.order-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.order-controls button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.order-controls button:hover {
+    background-color: #e68a00;
+}
+
+.order-total {
+    text-align: center;
+}
+
+.order-total p {
+    margin: 5px 0;
+    font-weight: bold ;
+}
+
+@media (max-width: 1050px) {
+    .contact-info #free {
+        display: none;
+    }
+    .contact-info #graph{
+        flex-wrap: nowrap;
+        margin-right: 70px;
+    }
+    .pizza-container{
+        grid-template-columns: auto auto ;
+    }
+
+
+}
+
+@media (max-width: 850px) {
+    .contact-info #graph {
+        display: none;
+    }
+
+
+    .contact-info #tel {
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: 70px;
+    }
+
+    .login button {
+        width: 60px;
+        margin-right: 10px;
+    }
+
+    .order-panel {
+        width: 180px;
+    }
+
+    header {
+        width: calc(100% - 250px);
+        right: 180px;
+    }
+
+    .upbadge-img {
+        margin-top: 88px;
+
+    }
+    .pizza-container{
+        grid-template-columns: auto ;
+
+    }
+}
+
+
+@media (max-width: 500px){
+    .info-panel{
+        white-space: wrap;
+        margin-left: -10px;
+    }
+    .contact-info{
+        white-space: wrap;
+    }
+    .upbadge-img{
+        top:10px;
+
+    }
+    .logo{
+        padding-top: -40px;
+
+    }
+    header{
+        padding-top: 0px;
+    }
+    .order-panel{
+        height: 97%;
+    }
+}
+
+
+
+
+

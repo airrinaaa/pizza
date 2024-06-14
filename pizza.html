@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="pizza.css" rel="stylesheet" type="text/css">
+    <script src="pizza.js" defer></script>
+    <title>Pizza Order</title>
+</head>
+<body>
+<div class="container">
+    <div class="main-panel">
+        <header id="header">
+            <div class="logo">
+                <span>PIZZA</span>
+                <span>KMA</span>
+            </div>
+            <picture class="upbadge-img">
+                <img src="img/discount.svg" alt="Discount">
+            </picture>
+            <div class="info-panel">
+                <div class="contact-info">
+                    <span id="tel">(044) 222 5 222</span>
+                    <span id="graph">24 години / 7 днів на тиждень</span>
+                    <span id="free">Безкоштовна доставка піци</span>
+                </div>
+                <div class="login">
+                    <button>Ввійти</button>
+                </div>
+                <hr>
+                <div class="pizza">
+                    Піца
+                </div>
+            </div>
+        </header>
+
+        <picture class="badge-img">
+            <img src="img/discount.svg" alt="Discount">
+        </picture>
+        <div class="badge">
+            <div class="badge-text">
+                ЦЬОГО ТИЖНЯ НА ВСЕ<br> -20%
+            </div>
+        </div>
+        <div class="pizza-title">
+            Усі піци <span>8</span>
+        </div>
+        <nav>
+            <a href="#" class="active" data-filter="all">Усі</a>
+            <a href="#" data-filter="meat">М'ясні</a>
+            <a href="#" data-filter="pineapple">З ананасами</a>
+            <a href="#" data-filter="mushroom">З грибами</a>
+            <a href="#" data-filter="ocean">З морепродуктами</a>
+            <a href="#" data-filter="vega">Вега</a>
+        </nav>
+
+        <div class="pizza-container" id="pizza-container">
+
+        </div>
+    </div>
+    <div class="order-panel">
+        <h2>Замовлення <span>(0)</span></h2>
+        <button class="clear-order" style="display:none;">Очистити замовлення</button>
+        <div class="order-container"></div>
+        <div class="order-total" style="display:none;">
+            <p>Сума замовлення</p>
+            <p>0 грн</p>
+            <button class="order-button">Замовити</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
